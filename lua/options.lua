@@ -1,41 +1,38 @@
-local opt = vim.opt -- for conciseness
+-- Objeto de opcoes de config do NeoVim
+local opt = vim.opt
 
--- line numbers
-opt.relativenumber = true -- show relative line numbers
-opt.number = true -- shows absolute line number on cursor line (when relative number is on)
+-- Configuracao dos numeros laterais
+opt.number = true -- Mostra os numeros laterais
+opt.relativenumber = true -- Mostra os numeros relativos a linha atual
 
--- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
-opt.shiftwidth = 2 -- 2 spaces for indent width
-opt.expandtab = true -- expand tab to spaces
-opt.autoindent = true -- copy indent from current line when starting new one
+-- Identacao e tab
+opt.tabstop = 2 -- 2 Espacos para o tab
+opt.shiftwidth = 2 -- 2 Espacos para a identacao
+opt.autoindent = true -- Faz a identacao da proxima linha para ser igual a da linha atual
 
--- line wrapping
-opt.wrap = false -- disable line wrapping
+-- Quebra de linhas
+opt.wrap = false -- Desativa a quebra de linhas
 
--- search settings
-opt.ignorecase = true -- ignore case when searching
-opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+-- Perquisa
+opt.ignorecase = true -- Ignora caixa alta e baixa quando pesquisando
+opt.smartcase = true -- Se o texto de pesquisa tiver caixa alta e baixa ele para de ignorar as caixas
 
--- cursor line
-opt.cursorline = true -- highlight the current cursor line
+-- Cursor
+opt.cursorline = true -- Faz um highlight da linha atual
 
--- appearance
-
--- turn on termguicolors for nightfly colorscheme to work
--- (have to use iterm2 or any other true color terminal)
+-- Aparencia
 opt.termguicolors = true
-opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+opt.background = "dark" -- Escolhe a versao dark dos temas selecionados
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- backspace
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
--- clipboard
-opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+-- Copiar
+opt.clipboard:append("unnamedplus") -- Usa as copias padroes do sistema
 
--- split windows
+-- Divitir a janela
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
-opt.iskeyword:append("-") -- consider string-string as whole word
+opt.iskeyword:append("-") -- considera a-a como uma palavra
