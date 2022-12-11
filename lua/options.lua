@@ -1,5 +1,10 @@
--- Objeto de opcoes de config do NeoVim
+-- Objetos de opcoes de config do NeoVim
 local opt = vim.opt
+local g = vim.g
+
+-- Desativa netrw
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
 
 -- Configuracao dos numeros laterais
 opt.number = true -- Mostra os numeros laterais
@@ -36,3 +41,7 @@ opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- considera a-a como uma palavra
+
+-- Configs em .vim
+vim.cmd 'set noshowmode'
+vim.cmd 'set mouse='
