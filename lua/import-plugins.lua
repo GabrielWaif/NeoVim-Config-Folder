@@ -4,7 +4,6 @@ if not status then
   return
 end
 
-
 -- A lista de plugins do packer
 return packer.startup(function(use)
 
@@ -19,6 +18,21 @@ return packer.startup(function(use)
   use 'neovim/nvim-lspconfig' -- Lsp
 
   use 'OmniSharp/omnisharp-vim' -- Omnisharp(Servidor de linguagem C#) 
+
+	-- Nvim Cmp(Autocomplete)
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/nvim-cmp'
+	
+	-- LuaSnip(Autocomplete)
+	-- 	use 'L3MON4D3/LuaSnip'
+	-- 	use { 'saadparwaiz1/cmp_luasnip' }
+	--
+	--
+	use 'hrsh7th/cmp-vsnip'
+	use 'hrsh7th/vim-vsnip'
 
 	-- Dependencias de icones
 	use 'lewis6991/gitsigns.nvim' -- GitSigns

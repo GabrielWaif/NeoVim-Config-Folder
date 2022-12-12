@@ -7,5 +7,9 @@ require('keybinds') -- Arquivo que configura o tema
 
 -- Plugin Configs
 require('setup-plugins') -- Arquivo que importra os plugns
-require('plugins/feline-config') -- Feline
-require('plugins/nvim-tree-config') -- NvimTree
+require('plugins.feline-config') -- Feline
+require('plugins.nvim-tree-config') -- NvimTree
+
+-- Lsp Configs
+ require('plugins.lsp.cmp-config')
+ require('plugins.lsp.lsp-config')

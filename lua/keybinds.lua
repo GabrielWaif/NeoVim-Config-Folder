@@ -7,4 +7,4 @@ function map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-map('n', '<C-t>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+map('n', '<C-[>', ':NvimTreeToggle', {noremap = true, silent = true})
